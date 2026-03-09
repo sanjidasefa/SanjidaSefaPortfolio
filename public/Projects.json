@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "name": "Elegant-Essence",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000",
+    "tags": ["MERN Stack", "Firebase", "Stripe", "Redux"],
+    "description": "A premium management solution for event decoration services featuring seamless booking and secure payments.",
+    "fullDesc": "Elegant-Essence provides a modern way to manage decoration services. It allows customers to explore premium packages, book appointments, and track service status in real-time. On the business side, it helps companies efficiently manage staff schedules and booking workflows with a clean, centralized dashboard.",
+    "tech": [
+      "React JS",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "Firebase Auth",
+      "Stripe API",
+      "Redux Toolkit",
+      "Tailwind CSS"
+    ],
+    "live": "https://taupe-sprite-2bc074.netlify.app/",
+    "github": "https://github.com/sanjidasefa/Elegant-Essence-Client",
+    "challenges": "The biggest challenge was building a dynamic scheduling system to prevent double-booking of staff and equipment. Managing the complex state of a multi-step booking process while ensuring a bug-free payment flow required deep logical planning and extensive testing.",
+    "improvements": "I plan to integrate an AR (Augmented Reality) feature for 3D decor visualization. Additionally, an AI-driven cost estimator based on venue size and specific materials would significantly enhance the user experience."
+  },
+  {
+    "id": "2",
+    "name": "Hero Home",
+    "image": "https://i.postimg.cc/mrYCYw57/Minimalist-Website-Launch-Tablet-Phone-Mockup-Instagram-Post.png",
+    "tags": ["Firebase", "React", "Framer Motion"],
+    "description": "A user-friendly marketplace connecting homeowners with trusted local service providers like electricians and plumbers.",
+    "fullDesc": "Hero Home bridges the gap between customers and service experts. It features real-time booking management, secure authentication via Firebase, and interactive dashboards for both providers and clients. The focus is on making home maintenance accessible and reliable.",
+    "tech": [
+      "React JS",
+      "Firebase Auth",
+      "Firestore",
+      "Firebase Storage",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "live": "http://clientsideherohome.netlify.app/",
+    "github": "https://github.com/sanjidasefa/Hero-Home-client",
+    "challenges": "Synchronizing real-time data across dual dashboards (Provider & Customer) without lag was the main hurdle. Developing a system where providers can accept or decline requests instantly required a strong grasp of Firebase real-time listeners.",
+    "improvements": "Future updates will include an in-app real-time chat for better communication and a geo-location tracking system to show the estimated time of arrival (ETA) for service providers."
+  },
+  {
+    "id": "3",
+    "name": "Winter Pet Zone",
+    "image": "https://i.postimg.cc/6qmvW186/Beige-Creative-Website-Launching-Mockup-Facebook-Cover.png",
+    "tags": ["React", "Snowfall", "Hot-Toast", "Router"],
+    "description": "A dedicated platform for specialized winter pet care, connecting pet owners with expert vets and seasonal tips.",
+    "fullDesc": "Winter Pet Zone aims to make pet care safer and more comfortable during cold months. It offers appointment booking with qualified vets, trained staff support, and curated winter health guides for various pet breeds in a visually themed environment.",
+    "tech": [
+      "React JS",
+      "Tailwind CSS",
+      "React-Snowfall",
+      "React-Hot-Toast",
+      "React Router",
+      "Lucide Icons"
+    ],
+    "live": "https://winter-pet-zoneweb.netlify.app/",
+    "github": "https://github.com/sanjidasefa/Winter-Pet-Zone",
+    "challenges": "The main difficulty was balancing the 'Winter Theme' visuals (like snowfall effects) without compromising performance. Categorizing health data specific to cold-weather pet issues also required careful information architecture.",
+    "improvements": "I intend to add a '24/7 Emergency Vet Call' video feature for winter storms. Another goal is an automated reminder system that sends personalized health tips based on the pet's age and local weather alerts."
+  },
+  {
+    "id": "4",
+    "name": "Hero App UI",
+    "image": "https://i.postimg.cc/FK3gPm7g/Black-Minimalist-Website-Mockup-Instagram-Post.png",
+    "tags": ["HTML", "Tailwind", "Firebase (Basic)", "Responsive"],
+    "description": "A high-fidelity service finder UI built during the learning phase to master complex layouts and basic Firebase integration.",
+    "fullDesc": "This project was a major milestone in my learning journey. It focuses on building professional, high-performance UI components for a service marketplace. It includes basic Firebase authentication and a fully responsive design for a premium mobile-first experience.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "Firebase Auth (Basic)"
+    ],
+    "live": "https://hero-web-app.netlify.app/",
+    "github": "https://github.com/sanjidasefa/hero-app",
+    "challenges": "As a beginner with Firebase, connecting frontend forms to the backend while managing asynchronous loading states was a great learning experience. Ensuring a professional look across all screen sizes was also a key focus.",
+    "improvements": "Now that I'm more skilled, I plan to implement full CRUD operations for service listings and a personalized booking history dashboard for users."
+  }
+]
