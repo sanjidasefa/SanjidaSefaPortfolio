@@ -23,6 +23,26 @@
   },
   {
     "id": "2",
+    "name": "Furni-Hub",
+    "image": "https://i.postimg.cc/mrYCYw57/Minimalist-Website-Launch-Tablet-Phone-Mockup-Instagram-Post.png",
+    "tags": ["Next Js","NExt Auth","Tailwind CSS", "React", "Framer Motion"],
+    "description": "A modern E-commerce platform dedicated to high-quality furniture and interior aesthetics",
+    "fullDesc": "Furni Hub offers a curated shopping experience with a focus on clean UI and smooth navigation. It allows users to browse collections, manage their carts, and explore furniture pieces that fit their home’s unique style.",
+    "tech": [
+      "React",
+      "Bycrypt",
+      "NectJs",
+      "Nect-Auth",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "live": "https://furni-hub-six.vercel.app/",
+    "github": "https://github.com/sanjidasefa/Furni-Hub",
+    "challenges": "The primary challenge was managing a large catalog of high-resolution images while maintaining fast load times. Optimizing the performance and ensuring a fully responsive grid layout across all devices required deep customization of Tailwind CSS and efficient asset handling in Vite.",
+    "improvements": "Upcoming features include a personalized 'Wishlist' for users to save items, a secure Stripe payment gateway integration, and an AI-powered recommendation engine to suggest furniture based on browsing history"
+  },
+  {
+    "id": "3",
     "name": "Hero Home",
     "image": "https://i.postimg.cc/mrYCYw57/Minimalist-Website-Launch-Tablet-Phone-Mockup-Instagram-Post.png",
     "tags": ["Firebase", "React", "Framer Motion"],
@@ -42,7 +62,7 @@
     "improvements": "Future updates will include an in-app real-time chat for better communication and a geo-location tracking system to show the estimated time of arrival (ETA) for service providers."
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "Winter Pet Zone",
     "image": "https://i.postimg.cc/6qmvW186/Beige-Creative-Website-Launching-Mockup-Facebook-Cover.png",
     "tags": ["React", "Snowfall", "Hot-Toast", "Router"],
@@ -62,7 +82,7 @@
     "improvements": "I intend to add a '24/7 Emergency Vet Call' video feature for winter storms. Another goal is an automated reminder system that sends personalized health tips based on the pet's age and local weather alerts."
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Hero App UI",
     "image": "https://i.postimg.cc/FK3gPm7g/Black-Minimalist-Website-Mockup-Instagram-Post.png",
     "tags": ["HTML", "Tailwind", "Firebase (Basic)", "Responsive"],
