@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Download } from 'lucide-react';
-import img from '../../assets/Pi7_Passport_Photo.jpeg';
+import img from '../../assets/Pi7_Passport_Photo.png';
 import { Link } from "react-router";
 
 const Hero = () => {
