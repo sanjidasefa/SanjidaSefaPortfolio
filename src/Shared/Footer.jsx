@@ -8,19 +8,17 @@ const Footer = () => {
   return (
     <footer className="bg-[#020617] text-white pt-20 pb-10 border-t border-slate-800">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"> 
           {/* প্রোফাইল সেকশন */}
           <div className="lg:col-span-1">
             <h2 className="text-2xl font-black tracking-tighter mb-4 italic text-white">
               SANJIDA <span className="text-blue-500">SEFA</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              MERN Stack Developer focused on building clean, user-centric web solutions. [cite: 6, 41] 
-              Passionate about turning complex problems into simple, elegant designs. [cite: 7]
+              MERN Stack Developer focused on building clean, user-centric web solutions.
+              Passionate about turning complex problems into simple, elegant designs.
             </p>
           </div>
-
           {/* নেভিগেশন */}
           <div>
             <h3 className="text-blue-500 font-bold uppercase tracking-widest text-xs mb-6">Quick Links</h3>
@@ -46,8 +44,8 @@ const Footer = () => {
                 <MapPin size={16} className="text-blue-500 mt-1" />
                 <span>Khan Mansion, Brown Compound Road, Barishal </span>
               </div>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
-                <Github size={16} className="text-blue-500" /> github.com [cite: 4]
+              <a href="https://github.com/sanjidasefa" target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-white transition-colors">
+                <Github size={16} className="text-blue-500" /> github.com 
               </a>
             </div>
           </div>
@@ -58,7 +56,7 @@ const Footer = () => {
           <p>© {currentYear} Kazi Sanjida Akter Sefa </p>
           <div className="flex gap-6">
             <span className="flex items-center gap-1"><Globe size={12} /> Barishal, Bangladesh </span>
-            <span>Diploma in CST [cite: 24]</span>
+            <span>Diploma in CST</span>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const Education = () => {
       institution: "Barisal Polytechnic Institute",
       status: "Appeared (Result Awaited)",
       result: "CGPA: 3.90 (Current)",
-      duration: "2020 - 2024",
+      duration: "2021 - 2025",
     },
   ];
 
@@ -22,8 +22,7 @@ const Education = () => {
     },
   ];
 
-  return (
-   
+  return (   
       <div className="p-10 md:p20 mx-auto max-w-6xl px-6">
         <motion.h3 
                     initial={{ opacity: 0, y: 20 }}
@@ -68,7 +67,6 @@ const Education = () => {
             <h4 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
               <Briefcase className="text-blue-900" /> Experience
             </h4>
-
             {experience.map((exp, index) => (
               <div key={index} className="relative pl-8 border-l-2 border-blue-900/20">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-blue-900 rounded-full"></div>
@@ -83,7 +81,6 @@ const Education = () => {
               </div>
             ))}
           </motion.div>
-
         </div>
       </div>
    

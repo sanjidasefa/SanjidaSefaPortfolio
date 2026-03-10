@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 const About = () => {
   const skills = [
     "HTML5 & CSS3",
+    "Tailwind CSS",
     "JavaScript (ES6+)",
     "React.js",
-    "Tailwind CSS",
+    "Firebase",
     "Node.js",
     "MongoDB",
+    "NextJs",
     "Git & GitHub",
-    "Firebase",
   ];
 
   const containerVariants = {
