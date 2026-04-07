@@ -1,73 +1,124 @@
-import { Send } from "lucide-react";
-import React from "react";
-import { Link } from "react-router"; 
+import { Send, Menu, X } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router"; 
 
 const Navbar = () => {
-  return (
-    <div className="sticky top-0 z-50 w-full px-2 md:px-10 py-4">
-      <div className="navbar bg-white/80 backdrop-blur-md text-blue-900 shadow-xl rounded-2xl border border-white/20 px-2 md:px-4">
-          <div className="navbar-start w-auto lg:w-1/2">
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost lg:hidden hover:bg-blue-50 px-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-white rounded-xl z-[1] mt-3 w-52 p-4 shadow-2xl border border-slate-100 space-y-2"
-            >
-              <li><Link to="/" className="font-semibold">Home</Link></li>
-              <li><Link to="/About-Me" className="font-semibold">About</Link></li>
-              <li><Link to="/Tech-Section" className="font-semibold">Tech</Link></li>
-              <li><Link to="/services" className="font-semibold">Services</Link></li>
-              <li><Link to="/My-Projects" className="font-semibold">Projects</Link></li>
-              <li><Link to="/My-Contact-Info" className="font-semibold">Contact</Link></li>
-            </ul>
-          </div>
-          <Link to="/" className="btn btn-ghost text-lg md:text-2xl font-black tracking-tighter text-blue-900 italic px-2">
-            Sanjida<span className="text-blue-600 italic ml-2">Sefa</span>
-          </Link>
-        </div>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-2">
-            <li><Link to="/" className="font-semibold hover:text-blue-600 transition-colors">Home</Link></li>
-            <li><Link to="/About-Me" className="font-semibold hover:text-blue-600 transition-colors">About</Link></li>
-            <li><Link to="/Tech-Section" className="font-semibold hover:text-blue-600 transition-colors">Tech</Link></li>
-            <li><Link to="/services" className="font-semibold hover:text-blue-600 transition-colors">Services</Link></li>
-            <li><Link to="/My-Projects" className="font-semibold hover:text-blue-600 transition-colors">Projects</Link></li>
-            <li><Link to="/My-Contact-Info" className="font-semibold hover:text-blue-600 transition-colors">Contact</Link></li>
-          </ul>
-        </div>
-        <div className="navbar-end flex-1 justify-end">
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/About-Me" },
+    { name: "Tech", path: "/Tech-Section" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/My-Projects" },
+    { name: "Contact", path: "/My-Contact-Info" },
+  ];
+
+  return (
+    <nav 
+      className={`fixed top-0 z-50 w-full transition-all duration-300 px-4 md:px-8 py-4 ${
+        isScrolled ? "py-2" : "py-4"
+      }`}
+    >
+      <div 
+        className={`mx-auto max-w-7xl flex items-center justify-between px-4 py-3 transition-all duration-300 border ${
+          isScrolled 
+            ? "bg-white/50 backdrop-blur-md border-gray-100 shadow-lg rounded-2xl" 
+            : "bg-white/40 backdrop-blur-sm border-white/20 rounded-2xl"
+        }`}
+      >
+        {/* Logo */}
+        <Link 
+          to="/" 
+          className="text-xl md:text-2xl font-black tracking-tighter text-blue-900 px-2 flex items-center gap-1 group"
+        >
+          <span>Sanjida</span>
+          <span className="text-blue-600 group-hover:text-blue-500 transition-colors">Sefa</span>
+        </Link>
+
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link 
+                to={link.path} 
+                className={`text-sm font-bold transition-all px-3 py-2 rounded-lg hover:bg-blue-50 ${
+                  location.pathname === link.path ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+                }`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTA */}
+        <div className="hidden lg:block">
           <a
             href="mailto:sanjidasefa9@gmail.com"
-            className="inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-3 bg-blue-600 rounded-xl md:rounded-2xl font-bold text-xs md:text-sm text-white hover:bg-blue-700 shadow-lg shadow-blue-600/20 transition-all active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-600/10 transition-all active:scale-95"
           >
-            <span className="hidden sm:inline">Say Hello</span>
-            <Send size={16} className="md:w-5 md:h-5" />
+            <span>Say Hello</span>
+            <Send size={14} />
           </a>
         </div>
 
+        {/* Mobile Toggle */}
+        <button 
+          className="lg:hidden text-blue-900 p-2 hover:bg-blue-50 rounded-xl transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`lg:hidden fixed inset-0 z-40 bg-white transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center h-full gap-6 p-6">
+          {navLinks.map((link, i) => (
+            <Link 
+              key={link.name}
+              to={link.path}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-3xl font-extrabold tracking-tight transition-all hover:scale-110 ${
+                location.pathname === link.path ? "text-blue-600" : "text-gray-900"
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <a
+            href="mailto:sanjidasefa9@gmail.com"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="mt-10 inline-flex items-center gap-3 px-10 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all"
+          >
+            Say Hello <Send size={20} />
+          </a>
+        </div>
+        <button 
+          className="absolute top-8 right-10 text-gray-900"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <X size={32} />
+        </button>
+      </div>
+    </nav>
   );
 };
 
 export default Navbar;
+

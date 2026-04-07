@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useScrollReveal from "../../hooks/useScrollReveal";
 
 const About = () => {
   const skills = [
@@ -14,125 +15,101 @@ const About = () => {
     "Git & GitHub",
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 },
-    },
-  };
+  // GSAP Revelations
+  useScrollReveal(".about-text", { x: -50, stagger: 0.2 });
+  useScrollReveal(".about-card", { x: 50 });
+  useScrollReveal(".skill-badge", { y: 20, stagger: 0.05, delay: 0.5 });
 
   return (
-    <section id="about" className="py-24 bg-gray-50 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">     
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h2 className="text-md font-bold uppercase tracking-[0.2em] text-blue-900">
-              Get To Know Me
-            </h2>
-            <h3 className="mt-3 text-4xl font-bold text-gray-900 leading-tight">
-              A Coder by Choice, <br /> An Artist by Heart.
-            </h3>
+    <section id="about" className="section-padding bg-[#020617] overflow-hidden border-t border-slate-800/50">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">     
+          {/* LEFT SIDE: Text Content */}
+          <div>
+            <div className="about-text">
+              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-blue-500 mb-4">
+                Get To Know Me
+              </h2>
+              <h3 className="text-4xl md:text-5xl font-black text-white leading-[1.1] mb-8">
+                A Coder by Choice, <br /> 
+                <span className="text-blue-500 italic">An Artist by Heart.</span>
+              </h3>
+            </div>
             
-            <div className="mt-6 space-y-4 text-lg text-gray-900 leading-relaxed">
+            <div className="about-text mt-6 space-y-6 text-lg text-gray-400 leading-relaxed max-w-xl">
               <p>
-                My journey into the world of programming started with a simple curiosity about how things work behind the screen. What began as an experiment with HTML tags quickly turned into a passion for building complex, interactive web applications. 
+                My journey into programming started with a simple curiosity about the mechanics of the web. What began as an experiment with HTML quickly evolved into a deep-seated passion for building high-performance, interactive applications.
               </p>
               <p>
-                As a fresh developer, I thrive on the MERN stack. I enjoy the process of turning a wireframe into a living, breathing interface that provides a seamless user experience. Clean code and scalable architecture are my standards.
+                Specializing in the <span className="text-white font-semibold">MERN stack</span>, I focus on transforming complex wireframes into seamless, user-centric interfaces. Clean architectural design and scalable code are my core principles.
               </p>
               <p>
-                Beyond the terminal, I’m a person of many colors. Whether it's the adrenaline of playing <strong>football</strong> or the tranquility of <strong>painting</strong>, I find inspiration everywhere. These hobbies keep my creativity sharp and my problem-solving skills fresh.
+                Beyond code, I draw inspiration from the competitive energy of <span className="text-blue-400">football</span> and the creative soul of <span className="text-blue-400">painting</span>. These passions fuel my problem-solving mindset and keep my perspective fresh.
               </p>
             </div>
 
-            <div className="mt-10">
-              <p className="font-bold text-gray-900 mb-5 italic">My Technical Toolbelt:</p>
-              <motion.div
-                className="flex flex-wrap gap-3"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
+            <div className="mt-12 about-text">
+              <p className="font-bold text-white mb-6 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-blue-500"></span>
+                The Technical Toolbelt
+              </p>
+              <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <motion.span
                     key={index}
-                    variants={itemVariants}
                     whileHover={{ 
-                      scale: 1.1, 
-                      y: -5,
-                      backgroundColor: "#1e3a8a",
-                      color: "#fff",
+                      scale: 1.05, 
+                      y: -2,
+                      backgroundColor: "rgba(59, 130, 246, 0.1)",
+                      borderColor: "rgba(59, 130, 246, 0.5)",
                     }}
-                    className="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 shadow-sm transition-all cursor-pointer"
+                    className="skill-badge px-5 py-2.5 bg-slate-900/50 border border-slate-800 rounded-xl text-sm font-medium text-gray-300 transition-colors cursor-default"
                   >
                     {skill}
                   </motion.span>
                 ))}
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* RIGHT SIDE: Journey Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
+          <div className="relative about-card">
             <motion.div
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="relative z-10 overflow-hidden rounded-3xl bg-blue-900 p-10 text-white shadow-2xl border border-blue-800"
+              className="relative z-10 overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-blue-600 to-blue-800 p-10 md:p-14 text-white shadow-2xl border border-white/10"
             >
-              <div className="mb-6 inline-block p-3 bg-blue-800 rounded-2xl">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="mb-8 inline-block p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               
-              <h3 className="text-2xl font-bold mb-4">The Developer Mindset</h3>
-              <p className="text-blue-100 leading-relaxed text-lg mb-8 italic">
-                "I believe that coding is not just about solving problems, but about creating tools that empower people."
+              <h3 className="text-3xl font-bold mb-6 tracking-tight">The Developer Mindset</h3>
+              <p className="text-blue-100/80 leading-relaxed text-xl mb-10 font-medium">
+                "I believe that code is an art form—one that bridges the gap between raw functionality and human emotion."
               </p>
 
-              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-blue-800">
+              <div className="grid grid-cols-2 gap-10 pt-8 border-t border-white/10">
                 <div>
-                  <p className="text-4xl font-black text-white">100%</p>
-                  <p className="text-xs mt-1 uppercase tracking-widest text-blue-400 font-bold">Dedication</p>
+                  <p className="text-5xl font-black text-white tracking-tighter">100%</p>
+                  <p className="text-[10px] mt-2 uppercase tracking-[0.2em] text-blue-200 font-bold">Innovation</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-black text-white">24/7</p>
-                  <p className="text-xs mt-1 uppercase tracking-widest text-blue-400 font-bold">Curiosity</p>
+                  <p className="text-5xl font-black text-white tracking-tighter">24/7</p>
+                  <p className="text-[10px] mt-2 uppercase tracking-[0.2em] text-blue-200 font-bold">Curiosity</p>
                 </div>
               </div>
+              
+              {/* Decorative circle */}
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
             </motion.div>
 
-            {/* Fading Glow Effect - ফিক্স করা অংশ */}
-            <motion.div 
-              animate={{ opacity: [0.2, 0.5, 0.2] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-10 -left-10 w-40 h-40 bg-blue-400 rounded-full blur-[80px] -z-10"
-            />
+            {/* Fading Glow Effect */}
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-blue-500/20 rounded-full blur-[100px] -z-10" />
             
-            <div className="absolute -bottom-6 -right-6 -z-10 h-full w-full rounded-3xl border-2 border-dashed border-blue-900/20"></div>
-          </motion.div>
+            <div className="absolute -bottom-8 -right-8 -z-10 h-full w-full rounded-[2.5rem] border border-dashed border-blue-500/20"></div>
+          </div>
 
         </div>
       </div>

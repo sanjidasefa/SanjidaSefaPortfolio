@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 
 const Projects = () => {
@@ -31,64 +31,98 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-[#020617] text-white">
       <div className="mx-auto max-w-6xl px-6">
+
+        {/* HEADER */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
-            <motion.span 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               className="text-blue-500 font-mono tracking-widest uppercase text-sm"
             >
               My Works
             </motion.span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-2">
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold mt-2"
+            >
               Featured <span className="text-blue-600">Projects</span>
-            </h2>
-          <p className="text-gray-400 max-w-sm mt-2">
-            A collection of projects where I've turned complex ideas into functional digital solutions.
-          </p>
+            </motion.h2>
+
+            <p className="text-gray-400 max-w-sm mt-3 leading-relaxed">
+              A collection of projects where I've turned complex ideas into functional digital solutions.
+            </p>
           </div>
         </div>
+
+        {/* PROJECT GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group relative bg-slate-900/50 rounded-3xl border border-slate-800 overflow-hidden hover:border-blue-500/50 transition-all duration-500"
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="group relative bg-slate-900/40 backdrop-blur-xl rounded-3xl border border-slate-800 overflow-hidden hover:border-blue-500/40 transition-all duration-500 shadow-lg hover:shadow-blue-500/10"
             >
+
+              {/* IMAGE */}
               <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.name} 
+                <img
+                  src={project.image}
+                  alt={project.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-60"></div>
+
+                {/* overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-70 group-hover:opacity-90 transition"></div>
               </div>
+
+              {/* CONTENT */}
               <div className="p-8">
+
+                {/* TAGS */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
-                      className="text-[10px] uppercase tracking-wider bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20"
+                    <span
+                      key={tag}
+                      className="text-[10px] uppercase tracking-wider bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 hover:bg-blue-500/20 transition"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                
-                <h3 className="text-2xl font-bold mb-3">{project.name}</h3>
-                <p className="text-gray-400 text-sm mb-6 line-clamp-2">{project.description}</p>
-                <Link 
-                  to={`/My-Projects/${project.id}`} 
-                  className="inline-flex items-center gap-2 text-white font-bold group/btn"
+
+                {/* TITLE */}
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition">
+                  {project.name}
+                </h3>
+
+                {/* DESCRIPTION */}
+                <p className="text-gray-400 text-sm mb-6 line-clamp-2 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* BUTTON */}
+                <Link
+                  to={`/My-Projects/${project.id}`}
+                  className="inline-flex items-center gap-3 text-white font-semibold group/btn"
                 >
-                  View Details 
-                  <span className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform">
+                  <span className="relative">
+                    View Details
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover/btn:w-full"></span>
+                  </span>
+
+                  <span className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center group-hover/btn:translate-x-2 group-hover/btn:scale-110 transition-all duration-300 shadow-lg shadow-blue-500/30">
                     <ArrowRight size={16} />
                   </span>
                 </Link>
+
               </div>
             </motion.div>
           ))}
