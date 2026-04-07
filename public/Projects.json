@@ -23,6 +23,26 @@
   },
   {
     "id": "2",
+    "name": "Floka",
+    "image": "https://i.postimg.cc/90f2xMFC/Colorful-Modern-Coffee-Product-Desktop-Prototype.png",
+    "tags": ["React (Vite)", "Tailwind CSS"],
+    "description": "The site follows an 'Agentic Interface' design language.",
+    "fullDesc": "The site follows an 'Agentic Interface' design language. Every interaction feels like communicating with a sophisticated AI system—glass cards glow on hover, status nodes drift without weight, and text unscrambles as it hits the viewport.",
+    "tech": [
+      "Tailwind CSS",
+      "React (Vite)",
+      "GSAP",
+      "Framer Motion",
+      "Lenis",
+      "React Icons"
+    ],
+    "live": "https://floka-shop-4ukp.vercel.app/",
+    "github": "https://github.com/sanjidasefa/Floka-Shop",
+  "challenges": "The core difficulty lay in engineering a dynamic scheduling engine to eliminate staff and equipment double-booking. Orchestrating a multi-step booking state machine while maintaining a flawless payment bridge required rigorous logical architecture and stress testing.",
+  "improvements": "Future iterations will feature an AR-powered 3D decor visualizer for immersive planning. Furthermore, I aim to implement an AI-driven cost estimation engine that dynamically calculates pricing based on venue dimensions and material selection."
+  },
+  {
+    "id": "3",
     "name": "Furni-Hub",
     "image": "https://i.postimg.cc/Gmqv78n3/Cream-Bold-Free-Download-Tablet-Mockup-Instagram-Post-(1).png",
     "tags": ["Next Js","NExt Auth","Tailwind CSS", "React", "Framer Motion"],
@@ -42,7 +62,7 @@
     "improvements": "Upcoming features include a personalized 'Wishlist' for users to save items, a secure Stripe payment gateway integration, and an AI-powered recommendation engine to suggest furniture based on browsing history"
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "Hero Home",
     "image": "https://i.postimg.cc/mrYCYw57/Minimalist-Website-Launch-Tablet-Phone-Mockup-Instagram-Post.png",
     "tags": ["Firebase", "React", "Framer Motion"],
@@ -62,7 +82,7 @@
     "improvements": "Future updates will include an in-app real-time chat for better communication and a geo-location tracking system to show the estimated time of arrival (ETA) for service providers."
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Winter Pet Zone",
     "image": "https://i.postimg.cc/6qmvW186/Beige-Creative-Website-Launching-Mockup-Facebook-Cover.png",
     "tags": ["React", "Snowfall", "Hot-Toast", "Router"],
@@ -82,7 +102,7 @@
     "improvements": "I intend to add a '24/7 Emergency Vet Call' video feature for winter storms. Another goal is an automated reminder system that sends personalized health tips based on the pet's age and local weather alerts."
   },
   {
-    "id": "5",
+    "id": "6",
     "name": "Hero App UI",
     "image": "https://i.postimg.cc/FK3gPm7g/Black-Minimalist-Website-Mockup-Instagram-Post.png",
     "tags": ["HTML", "Tailwind", "Firebase (Basic)", "Responsive"],

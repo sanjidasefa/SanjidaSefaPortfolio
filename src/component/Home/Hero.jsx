@@ -7,7 +7,7 @@ import { Link } from "react-router";
 const Hero = () => {
   return (
     <div className="bg-white overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6 py-20 flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-12">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
