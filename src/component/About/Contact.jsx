@@ -3,8 +3,6 @@ import { Mail, Phone, MessageSquare, Send, Copy, Check } from 'lucide-react';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
-  
-  // আপনার রেজুমের সঠিক তথ্য [cite: 2, 3]
   const myEmail = "sanjidasefa@gmail.com"; 
   const myPhone = "01735802904"; 
 
@@ -16,10 +14,9 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-blue-500" />,
+      icon: <Mail className="text-emerald-500" />,
       label: "Email Me",
       value: myEmail,
-      // সরাসরি জিমেইল কম্পোজ উইন্ডো ওপেন করার লিঙ্ক
       link: `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`
     },
     {
@@ -37,16 +34,15 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-[#020617] text-white">
+    <section id="contact" className="py-24 bg-white text-slate-800 border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-4 uppercase italic tracking-tighter">
-          Get In <span className="text-blue-600">Touch</span>
+          Get In <span className="text-emerald-500">Touch</span>
         </h2>
-        
-        {/* ইমেইল কপি করার অপশন (যদি লিঙ্ক কাজ না করে) */}
-        <div className="mb-10 inline-flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-full border border-slate-800">
-          <span className="text-gray-400 text-sm">{myEmail}</span>
-          <button onClick={handleCopyEmail} className="text-blue-500 hover:text-blue-400">
+
+        <div className="mb-10 inline-flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+          <span className="text-slate-600 text-sm">{myEmail}</span>
+          <button onClick={handleCopyEmail} className="text-emerald-500 hover:text-emerald-400">
             {copied ? <Check size={16} /> : <Copy size={16} />}
           </button>
         </div>
@@ -58,12 +54,12 @@ const Contact = () => {
               href={info.link}
               target="_blank"
               rel="noreferrer"
-              className="p-8 bg-slate-900/50 border border-slate-800 rounded-3xl hover:border-blue-600/50 transition-all hover:-translate-y-2 group shadow-xl"
+              className="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-emerald-500/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-emerald-500/10"
             >
-              <div className="w-12 h-12 bg-slate-800 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-white border border-slate-200 shadow-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 {info.icon}
               </div>
-              <h3 className="text-sm font-mono text-gray-500 uppercase tracking-widest mb-2">{info.label}</h3>
+              <h3 className="text-sm font-mono text-slate-500 uppercase tracking-widest mb-2">{info.label}</h3>
               <p className="text-lg font-semibold">{info.value}</p>
             </a>
           ))}
@@ -74,7 +70,7 @@ const Contact = () => {
             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-blue-600 rounded-2xl font-bold text-lg hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all active:scale-95"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 rounded-2xl font-bold text-lg text-white hover:bg-emerald-600 shadow-lg shadow-emerald-500/20 transition-all active:scale-95"
           >
             Say Hello <Send size={20} />
           </a>

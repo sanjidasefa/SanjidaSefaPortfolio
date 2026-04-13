@@ -7,7 +7,7 @@ const HomeLayout = () => {
   return (
     <div>
       <Navber></Navber>
-      <div className='bg-gray-200 '>
+      <div className='bg-slate-50 '>
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

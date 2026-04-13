@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-slate-50 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -14,15 +14,15 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center md:text-left flex-1"
         >
-          <p className="mb-4 font-body text-sm font-medium uppercase tracking-widest text-blue-800">
+          <p className="mb-4 font-body text-sm font-medium uppercase tracking-widest text-[#86198f]">
             Welcome to my portfolio
           </p>
-          <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-gray-900 sm:text-6xl lg:text-7xl">
-            Hi, I'm <span className="text-blue-900">Sanjida Sefa</span>
+          <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-slate-800 sm:text-6xl lg:text-7xl">
+            Hi, I'm <span className="text-emerald-500">Sanjida Sefa</span>
             <br />
-            <span className="text-3xl sm:text-5xl lg:text-6xl text-gray-700">Web Developer.</span>
+            <span className="text-3xl sm:text-5xl lg:text-6xl text-slate-500">Web Developer.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-gray-600 font-medium">
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-500 font-medium">
             I craft clean, user-friendly experiences and turn complex problems into simple, elegant web solutions.
           </p>
 
@@ -30,14 +30,14 @@ const Hero = () => {
             <a
               href="/Resume.pdf"
               download="Kazi_Sanjida_Sefa_Resume.pdf"
-              className="flex gap-2 items-center justify-center px-8 py-4 bg-blue-900 text-white font-bold rounded-xl hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 transform hover:-translate-y-1"
+              className="flex gap-2 items-center justify-center px-8 py-4 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300 transform hover:-translate-y-1"
             >
               Download Resume <Download size={20} />
             </a>
 
             <Link
               to="/My-Contact-Info"
-              className="flex items-center justify-center px-8 py-4 border-2 border-blue-900 text-blue-900 font-bold rounded-xl hover:bg-blue-900 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              className="flex items-center justify-center px-8 py-4 border-2 border-emerald-500 text-emerald-500 font-bold rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
             >
               Contact Me
             </Link>
@@ -65,7 +65,7 @@ const Hero = () => {
               },
               default: { duration: 1 }
             }}
-            className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden border-4 border-blue-900/10 shadow-2xl shadow-blue-900/20"
+            className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden border-4 border-emerald-500/10 shadow-2xl shadow-emerald-500/20"
           >
             <img
               src={img}

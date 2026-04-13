@@ -31,7 +31,7 @@ const Navbar = () => {
       }`}
     >
       <div 
-        className={`mx-auto max-w-7xl flex items-center justify-between px-4 py-3 transition-all duration-300 border ${
+        className={`mx-auto  flex items-center justify-between px-4 py-3 transition-all duration-300 border ${
           isScrolled 
             ? "bg-white/50 backdrop-blur-md border-gray-100 shadow-lg rounded-2xl" 
             : "bg-white/40 backdrop-blur-sm border-white/20 rounded-2xl"
@@ -40,10 +40,10 @@ const Navbar = () => {
         {/* Logo */}
         <Link 
           to="/" 
-          className="text-xl md:text-2xl font-black tracking-tighter text-blue-900 px-2 flex items-center gap-1 group"
+          className="text-xl md:text-2xl font-black tracking-tighter text-slate-800 px-2 flex items-center gap-1 group"
         >
           <span>Sanjida</span>
-          <span className="text-blue-600 group-hover:text-blue-500 transition-colors">Sefa</span>
+          <span className="text-emerald-500 group-hover:text-emerald-400 transition-colors">Sefa</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -52,8 +52,8 @@ const Navbar = () => {
             <li key={link.name}>
               <Link 
                 to={link.path} 
-                className={`text-sm font-bold transition-all px-3 py-2 rounded-lg hover:bg-blue-50 ${
-                  location.pathname === link.path ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+                className={`text-sm font-bold transition-all px-3 py-2 rounded-lg hover:bg-emerald-50 ${
+                  location.pathname === link.path ? "text-emerald-600" : "text-slate-600 hover:text-emerald-600"
                 }`}
               >
                 {link.name}
@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <a
             href="mailto:sanjidasefa9@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 text-white rounded-xl font-bold text-sm hover:bg-blue-700 shadow-md shadow-blue-600/10 transition-all active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-emerald-500 text-white rounded-xl font-bold text-sm hover:bg-emerald-600 shadow-md shadow-emerald-500/10 transition-all active:scale-95"
           >
             <span>Say Hello</span>
             <Send size={14} />
@@ -75,7 +75,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden text-blue-900 p-2 hover:bg-blue-50 rounded-xl transition-colors"
+          className="lg:hidden text-slate-800 p-2 hover:bg-emerald-50 rounded-xl transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -95,7 +95,7 @@ const Navbar = () => {
               to={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`text-3xl font-extrabold tracking-tight transition-all hover:scale-110 ${
-                location.pathname === link.path ? "text-blue-600" : "text-gray-900"
+                location.pathname === link.path ? "text-emerald-600" : "text-slate-800"
               }`}
             >
               {link.name}
@@ -104,13 +104,13 @@ const Navbar = () => {
           <a
             href="mailto:sanjidasefa9@gmail.com"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-10 inline-flex items-center gap-3 px-10 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 shadow-xl shadow-blue-600/20 transition-all"
+            className="mt-10 inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 text-white rounded-2xl font-bold text-lg hover:bg-emerald-600 shadow-xl shadow-emerald-500/20 transition-all"
           >
             Say Hello <Send size={20} />
           </a>
         </div>
         <button 
-          className="absolute top-8 right-10 text-gray-900"
+          className="absolute top-8 right-10 text-slate-800"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <X size={32} />
