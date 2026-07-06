@@ -21,7 +21,7 @@ const TechStack = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-emerald-500 font-mono tracking-[0.3em] uppercase text-md mb-4"
+            className="text-[#1B3C53] font-mono tracking-[0.3em] uppercase text-md mb-4"
           >
             Technical Arsenal
           </motion.h2>
@@ -31,7 +31,7 @@ const TechStack = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl font-extrabold"
           >
-            Technologies I <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-[#86198f]">Master</span>
+            Technologies I <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1B3C53] to-[#86198f]">Master</span>
           </motion.h3>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
@@ -61,11 +61,11 @@ const TechStack = () => {
                     initial={{ width: 0 }}
                     whileInView={{ width: tech.level }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="h-full bg-gradient-to-r from-emerald-500 to-[#86198f]"
+                    className="h-full bg-gradient-to-r from-[#1B3C53] to-[#86198f]"
                   />
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#1B3C53]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </motion.div>
           ))}
         </div>
@@ -73,10 +73,10 @@ const TechStack = () => {
            <motion.div 
               animate={{ rotate: 360 }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-              className="relative w-40 h-40 border-t-2 border-b-2 border-emerald-500/30 rounded-full flex items-center justify-center"
+              className="relative w-40 h-40 border-t-2 border-b-2 border-[#1B3C53]/30 rounded-full flex items-center justify-center"
            >
               <div className="w-24 h-24 border-l-2 border-r-2 border-[#86198f]/20 rounded-full" />
-              <div className="absolute w-4 h-4 bg-emerald-500 rounded-full blur-sm" />
+              <div className="absolute w-4 h-4 bg-[#1B3C53] rounded-full blur-sm" />
            </motion.div>
         </div>
       </div>

@@ -27,12 +27,12 @@ const About = () => {
           {/* LEFT SIDE: Text Content */}
           <div>
             <div className="about-text">
-              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-emerald-500 mb-4">
+              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-[#1B3C53] mb-4">
                 Get To Know Me
               </h2>
               <h3 className="text-4xl md:text-5xl font-black leading-[1.1] mb-8 text-slate-800">
                 A Coder by Choice, <br /> 
-                <span className="text-emerald-500 italic">An Artist by Heart.</span>
+                <span className="text-[#1B3C53] italic">An Artist by Heart.</span>
               </h3>
             </div>
             
@@ -44,13 +44,13 @@ const About = () => {
                 Specializing in the <span className="font-semibold">MERN stack</span>, I focus on transforming complex wireframes into seamless, user-centric interfaces. Clean architectural design and scalable code are my core principles.
               </p>
               <p>
-                Beyond code, I draw inspiration from the competitive energy of <span className="text-emerald-500 font-semibold">football</span> and the creative soul of <span className="text-plum-600 font-semibold text-[#86198f]">painting</span>. These passions fuel my problem-solving mindset and keep my perspective fresh.
+                Beyond code, I draw inspiration from the competitive energy of <span className="text-[#1B3C53] font-semibold">football</span> and the creative soul of <span className="text-plum-600 font-semibold text-[#86198f]">painting</span>. These passions fuel my problem-solving mindset and keep my perspective fresh.
               </p>
             </div>
 
             <div className="mt-12 text-about">
               <p className="font-bold mb-6 flex text-slate-800 items-center gap-3">
-                <span className="w-8 h-[1px] bg-emerald-500"></span>
+                <span className="w-8 h-[1px] bg-[#1B3C53]"></span>
                 The Technical Toolbelt
               </p>
               <div className="flex flex-wrap gap-3">
@@ -80,8 +80,8 @@ const About = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10 overflow-hidden rounded-[2.5rem] bg-white p-10 md:p-14 text-slate-800 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200"
             >
-              <div className="mb-8 inline-block p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="mb-8 inline-block p-4 bg-[#1B3C53] rounded-2xl border border-[#1B3C53]">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#1B3C53]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
@@ -94,7 +94,7 @@ const About = () => {
               <div className="grid grid-cols-2 gap-10 pt-8 border-t border-slate-100">
                 <div>
                   <p className="text-5xl font-black text-slate-800 tracking-tighter">100%</p>
-                  <p className="text-[10px] mt-2 uppercase tracking-[0.2em] text-emerald-500 font-bold">Innovation</p>
+                  <p className="text-[10px] mt-2 uppercase tracking-[0.2em] text-[#1B3C53] font-bold">Innovation</p>
                 </div>
                 <div>
                   <p className="text-5xl font-black text-slate-800 tracking-tighter">24/7</p>
@@ -107,7 +107,7 @@ const About = () => {
             </motion.div>
 
             {/* Fading Glow Effect */}
-            <div className="absolute -top-20 -left-20 w-64 h-64 bg-emerald-100 rounded-full blur-[100px] -z-10" />
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#1B3C53] rounded-full blur-[100px] -z-10" />
             
             <div className="absolute -bottom-8 -right-8 -z-10 h-full w-full rounded-[2.5rem] border border-dashed border-slate-300"></div>
           </div>

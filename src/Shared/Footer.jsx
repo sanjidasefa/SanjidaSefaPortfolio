@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white text-slate-800 pt-20 pb-10 border-t border-slate-200">
+    <footer className="text-slate-800 pt-20 pb-10 border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* TOP */}
@@ -16,7 +16,7 @@ const Footer = () => {
           {/* PROFILE */}
           <div>
             <h2 className="text-2xl font-black tracking-tight mb-4 italic text-slate-800">
-              SANJIDA <span className="text-emerald-500">SEFA</span>
+              SANJIDA <span className="text-[#1B3C53]">SEFA</span>
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed">
               MERN Stack Developer focused on building clean, user-centric web solutions.
@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* NAVIGATION */}
           <div>
-            <h3 className="text-emerald-500 font-bold uppercase tracking-widest text-xs mb-6">
+            <h3 className="text-[#1B3C53] font-bold uppercase tracking-widest text-xs mb-6">
               Quick Links
             </h3>
 
@@ -40,10 +40,10 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="relative hover:text-emerald-600 transition"
+                    className="relative hover:text-[#1B3C53] transition"
                   >
                     {link.name}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-emerald-500 transition-all group-hover:w-full"></span>
+                    <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#1B3C53] transition-all group-hover:w-full"></span>
                   </Link>
                 </li>
               ))}
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* CONTACT */}
           <div className="lg:col-span-2">
-            <h3 className="text-emerald-500 font-bold uppercase tracking-widest text-xs mb-6">
+            <h3 className="text-[#1B3C53] font-bold uppercase tracking-widest text-xs mb-6">
               Contact Information
             </h3>
 
@@ -60,22 +60,22 @@ const Footer = () => {
 
               <a
                 href="mailto:sanjidasefa@gmail.com"
-                className="flex items-center gap-3 hover:text-emerald-600 transition"
+                className="flex items-center gap-3 hover:text-[#1B3C53] transition"
               >
-                <Mail size={16} className="text-emerald-500" />
+                <Mail size={16} className="text-[#1B3C53]" />
                 sanjidasefa@gmail.com
               </a>
 
               <a
                 href="tel:01735802904"
-                className="flex items-center gap-3 hover:text-emerald-600 transition"
+                className="flex items-center gap-3 hover:text-[#1B3C53] transition"
               >
-                <Phone size={16} className="text-emerald-500" />
+                <Phone size={16} className="text-[#1B3C53]" />
                 01735802904
               </a>
 
               <div className="flex items-start gap-3 col-span-1 sm:col-span-2">
-                <MapPin size={16} className="text-emerald-500 mt-1" />
+                <MapPin size={16} className="text-[#1B3C53] mt-1" />
                 <span>
                   Khan Mansion, Brown Compound Road, Barishal
                 </span>
@@ -85,9 +85,9 @@ const Footer = () => {
                 href="https://github.com/sanjidasefa"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-3 hover:text-emerald-600 transition group"
+                className="flex items-center gap-3 hover:text-[#1B3C53] transition group"
               >
-                <Github size={16} className="text-emerald-500 group-hover:scale-110 transition" />
+                <Github size={16} className="text-[#1B3C53] group-hover:scale-110 transition" />
                 github.com/sanjidasefa
               </a>
             </div>

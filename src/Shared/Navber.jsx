@@ -43,7 +43,7 @@ const Navbar = () => {
           className="text-xl md:text-2xl font-black tracking-tighter text-slate-800 px-2 flex items-center gap-1 group"
         >
           <span>Sanjida</span>
-          <span className="text-emerald-500 group-hover:text-emerald-400 transition-colors">Sefa</span>
+          <span className="text-[#1B3C53] group-hover:text-[#1B3C53] transition-colors">Sefa</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -52,8 +52,8 @@ const Navbar = () => {
             <li key={link.name}>
               <Link 
                 to={link.path} 
-                className={`text-sm font-bold transition-all px-3 py-2 rounded-lg hover:bg-emerald-50 ${
-                  location.pathname === link.path ? "text-emerald-600" : "text-slate-600 hover:text-emerald-600"
+                className={`text-sm font-bold transition-all px-3 py-2 rounded-lg hover:bg-[#1B3C53] ${
+                  location.pathname === link.path ? "text-[#1B3C53]" : "text-slate-600 hover:text-[#1B3C53]"
                 }`}
               >
                 {link.name}
@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <a
             href="mailto:sanjidasefa9@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-2.5 bg-emerald-500 text-white rounded-xl font-bold text-sm hover:bg-emerald-600 shadow-md shadow-emerald-500/10 transition-all active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#1B3C53] text-white rounded-xl font-bold text-sm hover:bg-[#1B3C53] shadow-md shadow-[#1B3C53]/10 transition-all active:scale-95"
           >
             <span>Say Hello</span>
             <Send size={14} />
@@ -75,7 +75,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <button 
-          className="lg:hidden text-slate-800 p-2 hover:bg-emerald-50 rounded-xl transition-colors"
+          className="lg:hidden text-slate-800 p-2 hover:bg-[#1B3C53] rounded-xl transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -95,7 +95,7 @@ const Navbar = () => {
               to={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
               className={`text-3xl font-extrabold tracking-tight transition-all hover:scale-110 ${
-                location.pathname === link.path ? "text-emerald-600" : "text-slate-800"
+                location.pathname === link.path ? "text-[#1B3C53]" : "text-slate-800"
               }`}
             >
               {link.name}
@@ -104,7 +104,7 @@ const Navbar = () => {
           <a
             href="mailto:sanjidasefa9@gmail.com"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-10 inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 text-white rounded-2xl font-bold text-lg hover:bg-emerald-600 shadow-xl shadow-emerald-500/20 transition-all"
+            className="mt-10 inline-flex items-center gap-3 px-10 py-4 bg-[#1B3C53] text-white rounded-2xl font-bold text-lg hover:bg-[#1B3C53] shadow-xl shadow-[#1B3C53]/20 transition-all"
           >
             Say Hello <Send size={20} />
           </a>

@@ -23,7 +23,7 @@ const Projects = () => {
   if (loading) {
     return (
       <div className="h-96 flex items-center justify-center bg-slate-50 text-slate-800">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-emerald-500"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-[#1B3C53]"></div>
       </div>
     );
   }
@@ -39,7 +39,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-emerald-500 font-mono tracking-widest uppercase text-sm"
+              className="text-[#1B3C53] font-mono tracking-widest uppercase text-sm"
             >
               My Works
             </motion.span>
@@ -50,7 +50,7 @@ const Projects = () => {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl font-bold mt-2"
             >
-              Featured <span className="text-emerald-500">Projects</span>
+              Featured <span className="text-[#1B3C53]">Projects</span>
             </motion.h2>
 
             <p className="text-slate-500 max-w-sm mt-3 leading-relaxed">
@@ -68,7 +68,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -12, scale: 1.02 }}
-              className="group relative bg-white rounded-3xl border border-slate-200 overflow-hidden hover:border-emerald-500/40 transition-all duration-500 shadow-sm hover:shadow-emerald-500/10"
+              className="group relative bg-white rounded-3xl border border-slate-200 overflow-hidden hover:border-[#1B3C53]/40 transition-all duration-500 shadow-sm hover:shadow-[#1B3C53]/10"
             >
 
               {/* IMAGE */}
@@ -91,7 +91,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] uppercase tracking-wider bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full border border-emerald-500/20 hover:bg-emerald-500/20 transition"
+                      className="text-[10px] uppercase tracking-wider bg-[#1B3C53]/10 text-[#1B3C53] px-3 py-1 rounded-full border border-[#1B3C53]/20 hover:bg-[#1B3C53]/20 transition"
                     >
                       {tag}
                     </span>
@@ -99,7 +99,7 @@ const Projects = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-2xl font-bold mb-3 text-slate-800 group-hover:text-emerald-500 transition">
+                <h3 className="text-2xl font-bold mb-3 text-slate-800 group-hover:text-[#1B3C53] transition">
                   {project.name}
                 </h3>
 
@@ -111,14 +111,14 @@ const Projects = () => {
                 {/* BUTTON */}
                 <Link
                   to={`/My-Projects/${project.id}`}
-                  className="inline-flex items-center gap-3 text-emerald-600 font-semibold group/btn"
+                  className="inline-flex items-center gap-3 text-[#1B3C53] font-semibold group/btn"
                 >
                   <span className="relative">
                     View Details
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-emerald-500 transition-all group-hover/btn:w-full"></span>
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#1B3C53] transition-all group-hover/btn:w-full"></span>
                   </span>
 
-                  <span className="w-9 h-9 text-white rounded-full bg-emerald-500 flex items-center justify-center group-hover/btn:translate-x-2 group-hover/btn:scale-110 transition-all duration-300 shadow-md shadow-emerald-500/30">
+                  <span className="w-9 h-9 text-white rounded-full bg-[#1B3C53] flex items-center justify-center group-hover/btn:translate-x-2 group-hover/btn:scale-110 transition-all duration-300 shadow-md shadow-[#1B3C53]/30">
                     <ArrowRight size={16} />
                   </span>
                 </Link>

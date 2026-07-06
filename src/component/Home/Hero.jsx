@@ -18,7 +18,7 @@ const Hero = () => {
             Welcome to my portfolio
           </p>
           <h1 className="font-display text-4xl font-bold leading-tight tracking-tight text-slate-800 sm:text-6xl lg:text-7xl">
-            Hi, I'm <span className="text-emerald-500">Sanjida Sefa</span>
+            Hi, I'm <span className="text-[#1B3C53]">Sanjida Sefa</span>
             <br />
             <span className="text-3xl sm:text-5xl lg:text-6xl text-slate-500">Web Developer.</span>
           </h1>
@@ -30,14 +30,14 @@ const Hero = () => {
             <a
               href="/Resume.pdf"
               download="Kazi_Sanjida_Sefa_Resume.pdf"
-              className="flex gap-2 items-center justify-center px-8 py-4 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300 transform hover:-translate-y-1"
+              className="flex gap-2 items-center justify-center px-8 py-4 bg-[#1B3C53] text-white font-bold rounded-xl hover:bg-[#1B3C53] hover:shadow-lg hover:shadow-[#1B3C53]/30 transition-all duration-300 transform hover:-translate-y-1"
             >
               Download Resume <Download size={20} />
             </a>
 
             <Link
               to="/My-Contact-Info"
-              className="flex items-center justify-center px-8 py-4 border-2 border-emerald-500 text-emerald-500 font-bold rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              className="flex items-center justify-center px-8 py-4 border-2 border-[#1B3C53] text-[#1B3C53] font-bold rounded-xl hover:bg-[#1B3C53] hover:text-white transition-all duration-300 transform hover:-translate-y-1"
             >
               Contact Me
             </Link>
@@ -65,7 +65,7 @@ const Hero = () => {
               },
               default: { duration: 1 }
             }}
-            className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden border-4 border-emerald-500/10 shadow-2xl shadow-emerald-500/20"
+            className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden border-4 border-[#1B3C53]/10 shadow-2xl shadow-[#1B3C53]/20"
           >
             <img
               src={img}

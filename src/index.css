@@ -36,6 +36,6 @@
   }
 
   .btn-premium {
-    @apply px-8 py-4 bg-emerald-500 text-white rounded-2xl font-bold transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg hover:shadow-emerald-500/20 active:scale-95 inline-flex items-center gap-2;
+    @apply px-8 py-4 bg-[#1B3C53] text-white rounded-2xl font-bold transition-all duration-300 hover:bg-[#1B3C53] hover:shadow-lg hover:shadow-[#1B3C53]/20 active:scale-95 inline-flex items-center gap-2;
   }
 }

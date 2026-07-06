@@ -14,7 +14,7 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-emerald-500" />,
+      icon: <Mail className="text-[#1B3C53]" />,
       label: "Email Me",
       value: myEmail,
       link: `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`
@@ -26,7 +26,7 @@ const Contact = () => {
       link: `tel:${myPhone}`
     },
     {
-      icon: <MessageSquare className="text-emerald-500" />,
+      icon: <MessageSquare className="text-[#1B3C53]" />,
       label: "WhatsApp",
       value: myPhone,
       link: `https://wa.me/8801735802904` 
@@ -37,12 +37,12 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-white text-slate-800 border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-4 uppercase italic tracking-tighter">
-          Get In <span className="text-emerald-500">Touch</span>
+          Get In <span className="text-[#1B3C53]">Touch</span>
         </h2>
 
         <div className="mb-10 inline-flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-full border border-slate-200 shadow-sm">
           <span className="text-slate-600 text-sm">{myEmail}</span>
-          <button onClick={handleCopyEmail} className="text-emerald-500 hover:text-emerald-400">
+          <button onClick={handleCopyEmail} className="text-[#1B3C53] hover:text-[#1B3C53]">
             {copied ? <Check size={16} /> : <Copy size={16} />}
           </button>
         </div>
@@ -54,7 +54,7 @@ const Contact = () => {
               href={info.link}
               target="_blank"
               rel="noreferrer"
-              className="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-emerald-500/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-emerald-500/10"
+              className="p-8 bg-slate-50 border border-slate-200 rounded-3xl hover:border-[#1B3C53]/50 transition-all hover:-translate-y-2 group shadow-sm hover:shadow-[#1B3C53]/10"
             >
               <div className="w-12 h-12 bg-white border border-slate-200 shadow-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 {info.icon}
@@ -70,7 +70,7 @@ const Contact = () => {
             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-emerald-500 rounded-2xl font-bold text-lg text-white hover:bg-emerald-600 shadow-lg shadow-emerald-500/20 transition-all active:scale-95"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-[#1B3C53] rounded-2xl font-bold text-lg text-white hover:bg-[#1B3C53] shadow-lg shadow-[#1B3C53]/20 transition-all active:scale-95"
           >
             Say Hello <Send size={20} />
           </a>

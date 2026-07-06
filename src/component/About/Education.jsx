@@ -40,20 +40,20 @@ const Education = () => {
             className="space-y-8"
           >
             <h4 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
-              <GraduationCap className="text-emerald-500" /> Education
+              <GraduationCap className="text-[#1B3C53]" /> Education
             </h4>
             
             {education.map((edu, index) => (
-              <div key={index} className="relative pl-8 border-l-2 border-emerald-500/20">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-emerald-500 rounded-full shadow-lg shadow-emerald-500/40"></div>
+              <div key={index} className="relative pl-8 border-l-2 border-[#1B3C53]/20">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-[#1B3C53] rounded-full shadow-lg shadow-[#1B3C53]/40"></div>
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                  <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest">{edu.duration}</span>
+                  <span className="text-xs font-bold text-[#1B3C53] uppercase tracking-widest">{edu.duration}</span>
                   <h5 className="text-lg font-bold text-slate-800 mt-1">{edu.title}</h5>
                   <p className="text-slate-500 font-medium">{edu.institution}</p>
                   <div className="mt-4 flex items-center gap-2 text-green-600 font-bold text-sm bg-green-50 px-3 py-1 rounded-full w-fit">
                     <Award size={16} /> {edu.result}
                   </div>
-                  <p className="mt-2 text-xs text-emerald-600 font-semibold italic">{edu.status}</p>
+                  <p className="mt-2 text-xs text-[#1B3C53] font-semibold italic">{edu.status}</p>
                 </div>
               </div>
             ))}
@@ -65,13 +65,13 @@ const Education = () => {
             className="space-y-8"
           >
             <h4 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
-              <Briefcase className="text-emerald-500" /> Experience
+              <Briefcase className="text-[#1B3C53]" /> Experience
             </h4>
             {experience.map((exp, index) => (
-              <div key={index} className="relative pl-8 border-l-2 border-emerald-500/20">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-emerald-500 rounded-full"></div>
+              <div key={index} className="relative pl-8 border-l-2 border-[#1B3C53]/20">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 bg-[#1B3C53] rounded-full"></div>
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                  <span className="text-xs font-bold text-emerald-500 uppercase tracking-widest">{exp.duration}</span>
+                  <span className="text-xs font-bold text-[#1B3C53] uppercase tracking-widest">{exp.duration}</span>
                   <h5 className="text-lg font-bold text-slate-800 mt-1">{exp.role}</h5>
                   <p className="text-slate-500 font-medium">{exp.company}</p>
                   <p className="mt-3 text-sm text-slate-500 leading-relaxed">

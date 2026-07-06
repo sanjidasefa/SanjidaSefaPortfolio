@@ -29,7 +29,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-md font-bold uppercase tracking-[0.2em] text-emerald-500">My Skills</h2>
+            <h2 className="text-md font-bold uppercase tracking-[0.2em] text-[#1B3C53]">My Skills</h2>
             <h3 className="mt-3 text-4xl font-bold text-slate-800 leading-tight">
               A Coder by Choice, <br /> An Artist by Heart.
             </h3>
@@ -52,21 +52,21 @@ const About = () => {
               <div className="relative z-10 grid grid-cols-2 gap-6 text-center">
                 <div>
                   <p className="text-3xl font-black">10+</p>
-                  <p className="text-xs uppercase tracking-widest text-emerald-500 font-bold mt-1">Projects Done</p>
+                  <p className="text-xs uppercase tracking-widest text-[#1B3C53] font-bold mt-1">Projects Done</p>
                 </div>
                 <div>
                   <p className="text-3xl font-black">500+</p>
                   <p className="text-xs uppercase tracking-widest text-[#86198f] font-bold mt-1">Hours Coding</p>
                 </div>
               </div>
-              <div className="absolute top-0 right-0 w-20 h-20 bg-emerald-100 blur-3xl opacity-50"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-[#1B3C53] blur-3xl opacity-50"></div>
             </motion.div>
           </motion.div>
 
           {/* Right Side: Visual Skills (No Percentages) */}
           <div className="space-y-8">
             <h4 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-              <span className="w-8 h-1 bg-emerald-500 rounded-full"></span>
+              <span className="w-8 h-1 bg-[#1B3C53] rounded-full"></span>
               Technical Proficiency
             </h4>
 

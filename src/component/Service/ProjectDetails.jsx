@@ -34,7 +34,7 @@ const ProjectDetails = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-[#020617] text-white py-16 px-6"
+      className="min-h-screen py-16 px-6"
     >
       <div className="max-w-5xl mx-auto">
 
@@ -115,7 +115,7 @@ const ProjectDetails = () => {
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl"
+              className="bg-slate-400/20 border border-slate-800 p-8 rounded-3xl"
             >
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                 <Terminal className="text-blue-500" /> Description
