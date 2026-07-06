@@ -101,8 +101,25 @@
     "challenges": "The main difficulty was balancing the 'Winter Theme' visuals (like snowfall effects) without compromising performance. Categorizing health data specific to cold-weather pet issues also required careful information architecture.",
     "improvements": "I intend to add a '24/7 Emergency Vet Call' video feature for winter storms. Another goal is an automated reminder system that sends personalized health tips based on the pet's age and local weather alerts."
   },
-  {
+ {
     "id": "6",
+    "name": "Rais AT SEVEN",
+    "image": "https://i.postimg.cc/mgnBFzRh/Beige-Minimalist-Creative-Agency-Website-Desktop-Prototype.png",
+    "tags": ["HTML", "Tailwind", "Responsive"],
+    "description": "A high-fidelity service finder UI built during the learning phase to master complex layouts and basic Firebase integration.",
+    "fullDesc": "This project was a major milestone in my learning journey. It focuses on building professional, high-performance UI components for a service marketplace. It includes basic Firebase authentication and a fully responsive design for a premium mobile-first experience.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Tailwind CSS"
+    ],
+    "live": "https://rise-at-seven-gamma.vercel.app/",
+    "github": "https://github.com/sanjidasefa/Rise-At-Seven",
+    "challenges": "",
+    "improvements": ""
+  },
+  {
+    "id": "7",
     "name": "Hero App UI",
     "image": "https://i.postimg.cc/FK3gPm7g/Black-Minimalist-Website-Mockup-Instagram-Post.png",
     "tags": ["HTML", "Tailwind", "Firebase (Basic)", "Responsive"],
@@ -119,5 +136,24 @@
     "github": "https://github.com/sanjidasefa/hero-app",
     "challenges": "As a beginner with Firebase, connecting frontend forms to the backend while managing asynchronous loading states was a great learning experience. Ensuring a professional look across all screen sizes was also a key focus.",
     "improvements": "Now that I'm more skilled, I plan to implement full CRUD operations for service listings and a personalized booking history dashboard for users."
+  },
+{
+    "id": "8",
+    "name": "Rainbow Cafe",
+    "image": "https://i.postimg.cc/FK3gPm7g/Black-Minimalist-Website-Mockup-Instagram-Post.png",
+    "tags": ["React", "Tailwind", "JavaScript", "Responsive"],
+    "description": "A modern, high-fidelity restaurant and cafe website featuring an interactive menu, online table reservation, and a premium visual experience.",
+    "fullDesc": "Rainbow Cafe is a fully responsive front-end web application designed for a premium dining experience. It features an interactive food menu with categorized items, a seamless table reservation system, and a modern mobile-first UI layout built to ensure high performance and smooth user interactions.",
+    "tech": [
+      "React.js",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "HTML5",
+      "CSS3"
+    ],
+    "live": "https://rainbow-cafe.vercel.app/",
+    "github": "https://github.com/sanjidasefa/Rainbow-Cafe",
+    "challenges": "Designing an intuitive, mobile-first navigation for an extensive menu while maintaining fast image loading times and smooth layouts across various device screens.",
+    "improvements": "Plan to integrate a full-stack backend using Node.js and MongoDB to handle real-time table booking management, dynamic menu updates, and an active user ordering system."
   }
 ]

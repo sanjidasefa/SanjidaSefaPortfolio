@@ -7,8 +7,7 @@ const Education = () => {
     {
       title: "Diploma in Computer Science & Technology",
       institution: "Barisal Polytechnic Institute",
-      status: "Appeared (Result Awaited)",
-      result: "CGPA: 3.90 (Current)",
+      result: "CGPA: 3.80",
       duration: "2021 - 2025",
     },
   ];
@@ -18,8 +17,16 @@ const Education = () => {
       role: "Graphics Designer (Intern/Trainee)",
       company: "BSIT (Barisal School of IT)",
       duration: "3 Months",
+      date: "October,2025 - December,2025",
       description: "Worked on UI elements, social media assets, and brand identity designs.",
     },
+    {
+      "role": "Frontend Developer Intern",
+      "company": "Rank More Technology",
+      "duration": "3 Months",
+      "date": "June, 2026 - Present",
+      "description": "Developing and optimizing high-fidelity responsive user interfaces from design mockups and image prototypes. Leveraging HTML5, CSS3, JavaScript, and React.js to convert visual concepts into clean, pixel-perfect, and maintainable code while ensuring smooth cross-browser compatibility and submission standard compliance."
+    }
   ];
 
   return (   
@@ -53,7 +60,6 @@ const Education = () => {
                   <div className="mt-4 flex items-center gap-2 text-green-600 font-bold text-sm bg-green-50 px-3 py-1 rounded-full w-fit">
                     <Award size={16} /> {edu.result}
                   </div>
-                  <p className="mt-2 text-xs text-[#1B3C53] font-semibold italic">{edu.status}</p>
                 </div>
               </div>
             ))}
