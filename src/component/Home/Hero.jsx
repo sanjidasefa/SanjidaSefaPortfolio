@@ -30,7 +30,7 @@ const Hero = () => {
             <a
               href="/Resume.pdf"
               download="Kazi_Sanjida_Sefa_Resume.pdf"
-              className="flex gap-2 items-center justify-center px-8 py-4 bg-[#1B3C53] text-white font-bold rounded-xl hover:bg-[#1B3C53] hover:shadow-lg hover:shadow-[#1B3C53]/30 transition-all duration-300 transform hover:-translate-y-1"
+              className="flex gap-2 items-center justify-center px-8 py-4 bg-[#1B3C53] text-white hover:bg-white hover:text-[#1B3C53] font-bold rounded-xl hover:bg-[#1B3C53] hover:shadow-lg hover:shadow-[#1B3C53]/30 transition-all duration-300 transform hover:-translate-y-1"
             >
               Download Resume <Download size={20} />
             </a>

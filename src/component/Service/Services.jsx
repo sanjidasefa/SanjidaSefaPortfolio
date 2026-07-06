@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-24 bg-slate-50 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Side: Content */}

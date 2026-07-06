@@ -16,7 +16,7 @@ const TechStack = () => {
 
   return (
     <section className="py-24 text-slate-800 overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-10">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

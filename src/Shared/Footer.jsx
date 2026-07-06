@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Mail, MapPin, Phone, Globe } from "lucide-react";
+import { Github, Mail, MapPin, Phone, Globe,Linkedin } from "lucide-react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 
@@ -89,6 +89,15 @@ const Footer = () => {
               >
                 <Github size={16} className="text-[#1B3C53] group-hover:scale-110 transition" />
                 github.com/sanjidasefa
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kazisanjidasefa"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 hover:text-[#1B3C53] transition group"
+              >
+                <Linkedin  size={16} className="text-[#1B3C53] group-hover:scale-110 transition" />
+                linkedin.Sanjida Sefa
               </a>
             </div>
           </div>
